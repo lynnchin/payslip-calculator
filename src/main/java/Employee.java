@@ -9,6 +9,9 @@ public class Employee {
 	private double superRate;
 	private String paymentStartDate;
 	
+	private int incomeTax;
+	private int superAmount;
+	
 	public Employee(){
 		
 	}
@@ -72,4 +75,34 @@ public class Employee {
 		
 		return isValid;
 	}
+
+	public int getIncomeTax() {
+		return incomeTax;
+	}
+
+	public void setIncomeTax(int incomeTax) {
+		this.incomeTax = incomeTax;
+	}
+
+	public int getSuperAmount() {
+		return superAmount;
+	}
+
+	public void setSuperAmount(int superAmount) {
+		this.superAmount = superAmount;
+	}
+
+	public int grossIncome(){
+		return Math.round(annualSalary/12);
+	}
+	
+	public int netIncome(){
+		return (grossIncome()-incomeTax);
+	}
+	
+	@Override
+	public String toString(){
+		return this.getFirstName() + this.getLastName() + "," + getPaymentStartDate() + "," + grossIncome() + "," + incomeTax + "," + netIncome() + superAmount;
+	}
+	
 }
