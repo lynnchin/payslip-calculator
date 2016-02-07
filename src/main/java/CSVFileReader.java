@@ -31,7 +31,7 @@ public class CSVFileReader {
 			}
 			
 		}catch(FileNotFoundException ex) {
-			throw new PaySlipCalculatorException("File not found");
+			throw new PaySlipCalculatorException("File '" + fileName + "' not found");
 		}catch(Exception ex){
 			throw new PaySlipCalculatorException("Unable to read from file");
 		}finally{

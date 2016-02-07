@@ -18,7 +18,7 @@ public class CSVFileReaderTest extends TestCase {
 		try{
 			reader.readFrom("blar.txt");
 		}catch(PaySlipCalculatorException ex){
-			assertEquals("File not found",ex.getMessage());
+			assertEquals("File 'blar.txt' not found",ex.getMessage());
 		}
 	}
 
