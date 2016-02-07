@@ -3,10 +3,7 @@
  */
 public class SuperCalculator {
 	
-	public SuperCalculator(){
-	}
-	
-	public int calculate(double grossIncome, double superRate){
+	public static int calculate(double grossIncome, double superRate){
 		return (int)Math.round(grossIncome * superRate);
 	}
 }
