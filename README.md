@@ -66,12 +66,7 @@ gradle fatJar
 
 Execute JAR:
 
-
-Read from standard input:
-
-java -jar payslip-calculator-1.0-SNAPSHOT.jar
-
-Read from file:
+Execute command:
 
 java -jar payslip-calculator-1.0-SNAPSHOT.jar input.txt output.txt
 
