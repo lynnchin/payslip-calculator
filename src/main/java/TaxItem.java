@@ -2,8 +2,8 @@
  * Created by lynnchin on 7/02/2016.
  */
 public class TaxItem {
-	private long maxLimit;
-	private long minLimit;
+	private int maxLimit;
+	private int minLimit;
 	private double taxRate;
 	private double additionCost;
 	
@@ -11,7 +11,7 @@ public class TaxItem {
 	public TaxItem(){
 		this(0,0,0,0);
 	}
-	public TaxItem(long minlimit, long maxLimit, double taxRate, double additionCost){
+	public TaxItem(int minlimit, int maxLimit, double taxRate, double additionCost){
 		this.maxLimit = maxLimit;
 		this.minLimit = minlimit;
 		this.taxRate = taxRate;
@@ -26,28 +26,28 @@ public class TaxItem {
 	public void setTaxRate(double taxRate) {
 		this.taxRate = taxRate;
 	}
-
-	public long getMaxLimit() {
-		return maxLimit;
-	}
-
-	public void setMaxLimit(long maxLimit) {
-		this.maxLimit = maxLimit;
-	}
-
-	public long getMinLimit() {
-		return minLimit;
-	}
-
-	public void setMinLimit(long minLimit) {
-		this.minLimit = minLimit;
-	}
-
+	
 	public double getAdditionCost() {
 		return additionCost;
 	}
 
 	public void setAdditionCost(double additionCost) {
 		this.additionCost = additionCost;
+	}
+
+	public int getMaxLimit() {
+		return maxLimit;
+	}
+
+	public void setMaxLimit(int maxLimit) {
+		this.maxLimit = maxLimit;
+	}
+
+	public int getMinLimit() {
+		return minLimit;
+	}
+
+	public void setMinLimit(int minLimit) {
+		this.minLimit = minLimit;
 	}
 }
