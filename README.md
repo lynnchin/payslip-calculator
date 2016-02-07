@@ -34,10 +34,12 @@ super = 5,004 x 9% = 450.36 (round down) = 450
 Here is the csv input and output format we provide. (But feel free to use any format you want)
 
 Input (first name, last name, annual salary, super rate (%), payment start date): 
+
 David,Rudd,60050,9%,01 March – 31 March
 Ryan,Chen,120000,10%,01 March – 31 March
 
 Output (name, pay period, gross income, income tax, net income, super):
+
 David Rudd,01 March – 31 March,5004,922,4082,450
 Ryan Chen,01 March – 31 March,10000,2696,7304,1000
 
@@ -46,3 +48,30 @@ As part of your solution:
 List any assumptions that you have made in order to solve this problem.
 Provide instruction on how to run the application
 Provide a test harness to validate your solution.
+
+Build/Create JAR instructions
+-------------------------------
+
+To create new build from source:
+
+gradle build
+
+To run test cases:
+
+gradle cleanTest test
+
+To create an executable JAR:
+
+gradle fatJar
+
+Execute JAR:
+
+
+Read from standard input:
+
+java -jar payslip-calculator-1.0-SNAPSHOT.jar
+
+Read from file:
+
+java -jar payslip-calculator-1.0-SNAPSHOT.jar input.txt output.txt
+

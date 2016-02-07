@@ -64,16 +64,14 @@ public class Employee {
 		this.paymentStartDate = paymentStartDate;
 	}
 	
-	public boolean validate(){
+	public void validate() throws PaySlipCalculatorException{
 		boolean isValid = false;
 		
 		if(annualSalary < 0){
-			isValid = false;
+			throw new PaySlipCalculatorException("Invalid salary range. Salary value must be a positive integer");
 		}else if(superRate < 0.0 || superRate > 50.0){
-			isValid = false;
+			throw new PaySlipCalculatorException("Super rate must be between 0% - 50% inclusive");
 		}
-		
-		return isValid;
 	}
 
 	public int getIncomeTax() {
@@ -102,7 +100,7 @@ public class Employee {
 	
 	@Override
 	public String toString(){
-		return this.getFirstName() + this.getLastName() + "," + getPaymentStartDate() + "," + grossIncome() + "," + incomeTax + "," + netIncome() + superAmount;
+		return this.getFirstName() + " " + this.getLastName() + "," + getPaymentStartDate() + "," + grossIncome() + "," + incomeTax + "," + netIncome() + "," + superAmount;
 	}
 	
 }
